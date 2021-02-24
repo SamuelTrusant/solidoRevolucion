@@ -1,7 +1,7 @@
 # Sólido de revolución
 programa que crea un sólido de revolución.
 
-Autor: Samuel Trujillo Santana
+Autor: Samuel Trujillo Santana.
 
 ## Descripción
 El programa permite crear un sólido de revolución. El programa muestra inicialmente una pantalla partida por la mitad, con una línea que representa el eje de rotación. El usuario dibujará en el lado derecho el perfil que tendrá el objeto, posteriormente pulsará "enter" y la figura se creará. La aplicación permite una vez creada la figura, moverla con el ratón mantenidendo el botón izquierdo para rotara y el derecho para escalar.
@@ -18,6 +18,8 @@ En la transición entre el modo creación y el modo vista se llama al método cr
 El modo vista impide seguir dibujando pero permite mover la figura arrastrando el ratón mientras mantienes el botón izquierdo pulsado para rotarla, y el derecho para escalarla.
 
 ## Vista del programa funcionando
+
+(NOTA: El gif tarda unos segundos en empezar)
 
 ![](export.gif)
 
