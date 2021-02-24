@@ -1,8 +1,6 @@
 ArrayList<PShape> objs = new  ArrayList<PShape>();
 
-int cameraPos = 1;
 int angle = 10;
-float[] cameraOptions = {-600/2, 600/2, height+height/2};
 
 FloatList mouseXPos = new FloatList();
 FloatList mouseYPos = new FloatList();
@@ -10,7 +8,6 @@ FloatList mouseYPos = new FloatList();
 boolean objectCreated = false;
 
 float rotStep = 10;
-
 
 float rotX = 0;
 float rotY = 0;
@@ -67,72 +64,34 @@ void mouseDragged(){
       rotX += (pmouseY - mouseY);
       rotY += (mouseX - pmouseX);
     }
-     if (mouseButton == RIGHT) {
-            zoom -= (pmouseY - mouseY) * 0.015f;
-            if(zoom < 0.1) zoom = 0.1;
-        }
+    if(mouseButton == RIGHT) {
+      zoom -= (pmouseY - mouseY) * 0.015f;
+      if(zoom < 0.1) zoom = 0.1;
+    }
   }
 }
 
 void keyPressed(){
-  if(keyCode == ENTER){
-    CreateFigure();
-    objectCreated = true;
+  if(!objectCreated){
+    if(keyCode == ENTER){
+      CreateFigure();
+    }
   }
   
   if(key == 'r'){
     ResetFigure();
   }
-  if(objectCreated){
-    if(keyCode == UP){
-      /*
-      cameraPos++;
-      switch(cameraPos){
-        case 0:
-          camera(width/2, height/4, (height/2) / tan(PI/6), width/2, height/2, 0, 0, 1, 0);
-          break;
-        case 1:
-          camera(0, -height/2, 0, width/2, height/2, 0, 0, 1, 0);
-          break;
-  
-        default:
-          camera(0, height+height/2, 0, width/2, height/2, 0, 0, 1, 0);
-          cameraPos = -1;
-          break;
-      }*/
-      rotX += rotStep;
-    }
-    if(keyCode == DOWN){
-      rotX -= rotStep;
-    }
-    if(keyCode == RIGHT){
-       rotY += rotStep;
-    }
-    if(keyCode == LEFT){
-       rotY -= rotStep;
-    }
-  }
 }
 
+
 void CreateFigure(){
-  /*obj=createShape();
-  obj.beginShape(TRIANGLE_STRIP);
-  obj.fill(102);
-  obj.stroke (255);
-  obj.strokeWeight(2);*/
-  
   float[] point = new float[3];
-  //float[][] currentCol = new float[mouseXPos.size()][3];
   float[] currentColum = new float[3];
   float[] nextColum = new float[3];
-  //float[][] prevCol = new float[mouseXPos.size()][3];
-
-//AQUÍ EMPIEZA LAS ITERACIONES DE ROTACIONES
-
-//PUEDES PONER RADIANS(x) PARA PASAR X GRADOS A RADIANES
   float angleRadians = radians(angle);
   
-  if(mouseXPos.size() == 0) return;
+  if(mouseXPos.size() < 2) return;
+  
   for(int j = 0; j < 360/angle; j++){
     float[][] maskY = {{cos(angleRadians * j), 0, sin(angleRadians * j)}, {0, 1, 0}, {-sin(angleRadians * j), 0, cos(angleRadians * j)}};
     float[][] maskY2 = {{cos(angleRadians * j + angleRadians), 0, sin(angleRadians * j + angleRadians)}, {0, 1, 0}, {-sin(angleRadians * j + angleRadians), 0, cos(angleRadians * j + angleRadians)}};
@@ -154,15 +113,9 @@ void CreateFigure(){
       nextColum[1] = 0;
       nextColum[2] = 0;
 
-
       for(int m = 0; m < point.length; m++){
         for(int n = 0; n < point.length; n++){
           currentColum[m] += point[n] * maskY[n][m];
-        }
-      }
-            
-      for(int m = 0; m < point.length; m++){
-        for(int n = 0; n < point.length; n++){
           nextColum[m] += point[n] * maskY2[n][m];
         }
       }
@@ -172,11 +125,8 @@ void CreateFigure(){
     }
     obj.endShape();
     objs.add(obj);
-    //objs[0] = obj;
   }
-    
-  //mouseXPos = new ArrayList<Float>();
-  //mouseYPos = new ArrayList<Float>();
+  objectCreated = true;
 }
 
 
@@ -184,7 +134,6 @@ void ResetFigure(){
   while(objs.size() > 0){
     objs.remove(0);
   }
-  
   mouseXPos = new FloatList();
   mouseYPos = new FloatList();
   rotX = 0;
