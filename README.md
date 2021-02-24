@@ -17,6 +17,10 @@ En la transición entre el modo creación y el modo vista se llama al método cr
 
 El modo vista impide seguir dibujando pero permite mover la figura arrastrando el ratón mientras mantienes el botón izquierdo pulsado para rotarla, y el derecho para escalarla.
 
+## Vista del programa funcionando
+
+![](export.gif)
+
 ## Referencias
 
 Guión de prácticas de CIU
