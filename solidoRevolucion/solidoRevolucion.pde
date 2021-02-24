@@ -1,20 +1,30 @@
+//import gifAnimation.*;
+
+//array con las tiras del objeto
 ArrayList<PShape> objs = new  ArrayList<PShape>();
 
+//angulo en el que se divide la figura
 int angle = 10;
 
+//posiciones del ratón
 FloatList mouseXPos = new FloatList();
 FloatList mouseYPos = new FloatList();
 
+//boleano que controla el modo del programa
 boolean objectCreated = false;
 
-float rotStep = 10;
-
+// variables para rotar y escalar la figura
 float rotX = 0;
 float rotY = 0;
 float zoom = 1;
 
+//GifMaker gifExport;
+
 void setup ( ) {
   size(600 , 600 ,P3D) ;
+  
+  //gifExport = new GifMaker(this, "export.gif");
+  //gifExport.setRepeat(0);
 }
 
 void draw ( ) {
@@ -35,6 +45,8 @@ void draw ( ) {
       if(objs.get(i) != null)shape(objs.get(i));
     }
   }
+  
+  //gifExport.addFrame();
 }
 
 void PaintLine(){
@@ -81,6 +93,10 @@ void keyPressed(){
   if(key == 'r'){
     ResetFigure();
   }
+  
+  /*if(key == 's'){
+    gifExport.finish();
+  }*/
 }
 
 
