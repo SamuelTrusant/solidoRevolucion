@@ -9,7 +9,7 @@ El programa permite crear un sólido de revolución. El programa muestra inicial
 Adicionalmente permite resetear la figura una vez creada o en medio del proceso para empezar de nuevo. Durante la creación del perfil el usuario puede pulsar el botón derecho del ratón para borrar el último punto.
 
 ## trabajo realizado
-El programa posee técnicamente dos modos: el modo creación y el modo vista, y el se indica en qué modo se encuentra actualmente es una variable boleana de nombre "objectCreated":
+El programa posee técnicamente tres modos: la pantalla de ayuda, el modo creación y el modo vista, y existe una variable entera de nombre "modo" que indica el modo actual:
 
 El modo creación permite ir seleccionando los puntos para ir dibujando el perfil del objeto, el cuál se va mostrando en pantalla. Cada vez que el usuario hace click se guarda la posición X del ratón en una lista y la posición Y en otra. El programa seguirá en este modo hasta que el usuario pulse "enter" para pasar al modo vista.
 
@@ -17,9 +17,9 @@ En la transición entre el modo creación y el modo vista se llama al método cr
 
 El modo vista impide seguir dibujando pero permite mover la figura arrastrando el ratón mientras mantienes el botón izquierdo pulsado para rotarla, y el derecho para escalarla.
 
-## Vista del programa funcionando
+La pantalla de ayuda indica los controles y se puede llamar en cualquier momento con la tecla 'h' y al pulsar enter volverá al estado anterior del programa.
 
-(NOTA: El gif tarda unos segundos en empezar)
+## Vista del programa funcionando
 
 ![](export.gif)
 
