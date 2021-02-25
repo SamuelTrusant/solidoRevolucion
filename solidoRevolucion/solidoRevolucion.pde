@@ -23,7 +23,7 @@ float zoom = 1;
 
 //GifMaker gifExport;
 
-String m = "Dibuja una linea seleccionando puntos con el botón izquierdo del ratón para crear el perfil.\n\nPuedes borrar el último punto con el botón derecho del ratón.\n\nPulsa \"enter\" para crear la figura.\n\nEn el modo vista manten el botón izquierdo del ratón para rotar la figura y el derecho para escalarla.\n\nPuedes pulsar la tecla 'h' en cualquier momento para ver esta pantalla de ayuda y puedes pulsar la tecla 'r' para resetear la figura.";
+String m = "Dibuja una línea seleccionando puntos con el botón izquierdo del ratón para crear el perfil.\n\nPuedes borrar el último punto con el botón derecho del ratón.\n\nPulsa \"Enter\" para crear la figura.\n\nEn el modo vista mantén el botón izquierdo del ratón para rotar la figura y el derecho para escalarla.\n\nPuedes pulsar la tecla 'h' en cualquier momento para ver esta pantalla de ayuda y puedes pulsar la tecla 'r' para resetear la figura.";
 
 
 void setup ( ) {
