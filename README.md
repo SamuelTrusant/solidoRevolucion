@@ -4,9 +4,9 @@ programa que crea un sólido de revolución.
 Autor: Samuel Trujillo Santana.
 
 ## Descripción
-El programa permite crear un sólido de revolución. El programa muestra inicialmente una pantalla partida por la mitad, con una línea que representa el eje de rotación. El usuario dibujará en el lado derecho el perfil que tendrá el objeto, posteriormente pulsará "enter" y la figura se creará. La aplicación permite una vez creada la figura, moverla con el ratón mantenidendo el botón izquierdo para rotara y el derecho para escalar.
+El programa permite crear un sólido de revolución. Inicialmente se muestra una pantalla partida por la mitad, con una línea que representa el eje de rotación. El usuario dibujará en el lado derecho el perfil que tendrá el objeto, posteriormente pulsará "enter" y la figura se creará. La aplicación permite una vez creada la figura, moverla con el ratón mantenidendo el botón izquierdo para rotara y el derecho para escalar.
 
-Adicionalmente permite resetear la figura una vez creada o en medio del proceso para empezar de nuevo. Durante la creación del perfil el usuario puede pulsar el botón derecho del ratón para borrar el último punto.
+Adicionalmente permite resetear la figura una vez creada o en medio del proceso para empezar de nuevo, al igual que se puede mostrar la ayuda de los controles pulsando la tecla 'h'. Durante la creación del perfil el usuario puede pulsar el botón derecho del ratón para borrar el último punto.
 
 ## trabajo realizado
 El programa posee técnicamente tres modos: la pantalla de ayuda, el modo creación y el modo vista, y existe una variable entera de nombre "modo" que indica el modo actual:
@@ -17,7 +17,7 @@ En la transición entre el modo creación y el modo vista se llama al método cr
 
 El modo vista impide seguir dibujando pero permite mover la figura arrastrando el ratón mientras mantienes el botón izquierdo pulsado para rotarla, y el derecho para escalarla.
 
-La pantalla de ayuda indica los controles y se puede llamar en cualquier momento con la tecla 'h' y al pulsar enter volverá al estado anterior del programa.
+La pantalla de ayuda indica los controles y se puede llamar en cualquier momento con la tecla 'h' y al pulsar "enter" volverá al estado anterior del programa.
 
 ## Vista del programa funcionando
 
@@ -32,3 +32,5 @@ Referencias Processing https://processing.org/reference/
 Librería sound https://processing.org/reference/libraries/sound/
 
 Librería GifAnimation https://github.com/extrapixel/gif-animation
+
+Foro de preguntas-respuestas Processing https://forum.processing.org/one/index.html
